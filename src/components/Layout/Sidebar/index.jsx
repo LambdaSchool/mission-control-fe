@@ -4,15 +4,15 @@ import Logo from '../../../images/logo.png';
 
 import {
   sidebar,
+  logoContainer,
   logo,
   links,
   link,
   current,
-  logoContainer,
   logoutButton,
   topLinks,
-  bottomLinks
-} from '../../../styles/sidebar.module.scss';
+  bottomLinks,
+} from './Sidebar.module.scss';
 
 const Sidebar = ({ logout }) => {
   const location = useLocation();
@@ -30,12 +30,9 @@ const Sidebar = ({ logout }) => {
           >
             Projects
           </NavLink>
-          <NavLink to="/students" className={link} activeClassName={current}>
-            Students
-          </NavLink>
         </div>
         <div className={bottomLinks}>
-          <button className={logoutButton}>
+          <button type="button" className={logoutButton}>
             <NavLink to="/" onClick={logout}>
               Logout
             </NavLink>
