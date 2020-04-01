@@ -1,0 +1,13 @@
+# Inspired by https://youknowfordevs.com/2018/12/07/getting-control-of-your-dockerignore-files.html
+
+# Start by excluding everything!
+#
+*
+
+# Now un-exclude package.json and the app folder:
+#
+!public
+!src
+!package.json
+!yarn.lock
+!LICENSE
